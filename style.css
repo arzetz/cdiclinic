@@ -17,7 +17,7 @@ a{
     justify-content: center;
 }
 .main_screen_outer{
-    /*Да или нет max-width: 1380px;*/
+    max-width: 1380px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -113,7 +113,7 @@ span.doctor_info{
     margin-top: 80px;
 }
 .main_info_outer{
-    /*Да или нет max-width: 1380px;*/
+max-width: 1380px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -149,17 +149,12 @@ ul li{
 
 .main_info_inner_down{
     display: flex;
-   /*Да или нет*/ max-width: 1380px;
+   max-width: 1380px;
    justify-content: space-between;
 }
 .main_info_inner_left{
     width: 1200px;
 }
-/*Да или нет @media (min-width: 1380px) {
-    .main_info_inner_left{
-    margin-left: 100px;
-    }
-}*/
 .main_info_inner_right{
     margin-right: 100px;
     background-image: url(woman-cheek-stock.png);
@@ -170,18 +165,20 @@ ul li{
     border-radius: 10px;
 }
 .main_info_inner_left_dark{
+    margin-left: 100px;
     display: flex;
     align-items: center;
     height: auto;
     background-color: #EEF2F9;
 }
 .main_info_inner_left_white{
+    margin-left: 100px;
     display: flex;
     align-items: center;
     height: auto;
 }
 .info_number{
-    margin-left: 100px;
+    margin-left: 10px;
     font-size: 64px;
 
 }
@@ -193,8 +190,12 @@ ul li{
     margin-bottom: 2%;
 }
 .info_number.one{
-    margin-left: 112px;
+    margin-left: 10px;
 }
+.info_text.one{
+    margin-left: 72px;
+}
+
 
 @media(max-width: 1380px){
    
@@ -207,12 +208,21 @@ ul li{
     .main_info_inner_right{
         margin-right: 3%;
     }
+    .main_info_inner_left_dark{
+        margin-left: 3%;
+    }
+    .main_info_inner_left_white{
+        margin-left: 3%;
+    }
     .info_number{
         margin-left: 6%;
         font-size: 64px;
     }    
     .info_number.one{
-        margin-left: 8%;
+        margin-left: 7%;
+    }
+    .info_text.one{
+        margin-left: 65px;
     }
 }
 
@@ -266,6 +276,7 @@ ul li{
     margin-top: 80px;
 }
 .choose_info_outer{
+    max-width: 1380px;
     width: 100%;
 }
 .choose_info_inner_top{
@@ -307,7 +318,7 @@ ul li{
 }
 .choose_info_inner_down{
     display: flex;
-
+    justify-content: space-between;
     margin-left: 100px;
 }
 .choose_info_inner_left{
@@ -316,9 +327,9 @@ ul li{
 .choose_info_inner_right{
     display: block;
     margin-top: 35px;
-    margin-left: 60px;
+    margin-right: 100px;
 }
-.choose_info_inner_right_image{
+img.choose_info_inner_right_image{
     border-radius: 10px;
 }
 .choose_info_inner_right_button{
@@ -331,4 +342,71 @@ ul li{
     color: #ffffff;
     border-radius: 10px;
     height: 44px;
+    width: 100%;
+}
+
+/*Мнение специалиста*/
+#expert_info{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.expert_info_outer{
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    max-width: 1185px;
+    width: 100%;
+    
+    background-color: #EEF2F9;
+}
+
+.expert_info_inner_left{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px 0px 30px;
+}
+.expert_info_h2{
+    margin: 0px 0px 0px 0px;
+}
+.expert_name{
+    margin-top: 15px;
+    font-size: 15px;
+}
+.expert_post{
+    font-size: 12px;
+    color: #54BAF3;
+}
+.expert_info_p{
+    margin-top: 45px;
+    
+}
+.expert_info_inner_right {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 60px;
+    margin-right: 60px; /* Оставляем только это */
+    align-self: center;
+    display: flex;
+    justify-content: flex-end; /* Правильное выравнивание */
+    align-items: flex-end; /* Выравнивание по нижнему краю */
+    
+    height: 220px;
+    background-size: cover;
+    background-image: url('doctor_expert.png');
+}
+.expert_button{
+    height: 36px;
+    width: 162px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #54BAF3;
+    color: #ffffff;
+    border-radius: 10px;
 }
