@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.choose_button');
+            const textContainer_h2 = document.getElementById('text_container_h2');
+            const textContainer_p = document.getElementById('text_container_p');
+    
+            const texts_h2 = {
+                choose_button1: "Питание и питье",
+                choose_button2: "Уход за полостью рта",
+                choose_button3: "Медикаменты и контроль"
+            };
+    
+            const texts_p = {
+                choose_button1: `<b>Послеоперационное голодание:</b> не ешьте и не пейте в течение 2 часов после операции. 
+                В следующие сутки избегайте горячей пищи и напитков. Пейте только теплую или прохладную жидкость.
+                <br></br>
+                <b>Грубая и острая пища:</b> в первые 3-4 дня избегайте жесткой, острой и горячей пищи.
+                Не употребляйте продукты, которые могут застрять в лунке или повредить её (орехи, сухари, твердые продукты).
+                <br></br>
+                <b>Жевание:</b> не жуйте на стороне удаленного зуба в первые дни.`,
+
+                choose_button2: `<b>Чистка зубов:</b> Чистите зубы дважды в день, но избегайте касания места удаления зуба в первые 24 часа.
+                После этого можно аккуратно чистить зубы, не затрагивая лунку.
+                <br></br>
+                <b>Полоскания:</b> Без назначения врача не полощите лунку.
+                Кровяной сгусток необходим для заживления, его утрата может вызвать воспаление (например, альвеолит).
+                Врач может назначить антисептические ванночки, но только по мере необходимости.
+                <br></br>
+                <b>Не трогайте лунку:</b> Не касайтесь места удаления зуба языком,
+                руками или другими предметами, чтобы избежать инфекции и повреждения лунки.`,
+                
+                choose_button3: `<b>Противовоспалительные и обезболивающие средства:</b> При боли и отеке принимайте препараты,
+                назначенные врачом, чтобы уменьшить воспаление и ускорить заживление.
+                <br></br>
+                <b>Антибиотики:</b> Если врач назначил антибиотики, строго следуйте графику их приема.
+                <br></br>
+                <b>Температура:</b> Легкое повышение температуры в первые сутки после операции является нормой.
+                Если температура держится выше 38°C или продолжается более 2 дней, обратитесь к врачу.`
+            };
+    
+            buttons.forEach(choose_button => {
+                choose_button.addEventListener('click', function() {
+                    buttons.forEach(d => d.classList.remove('active'));
+                    this.classList.add('active');
+                    const buttonId = this.id;
+                    textContainer_h2.textContent = texts_h2[buttonId];  // Здесь используем textContent, т.к. заголовок не нуждается в HTML.
+                    textContainer_p.innerHTML = texts_p[buttonId];  // Здесь используем innerHTML, чтобы правильно отобразить HTML-теги.
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+
+    <!--main_screen-->
+    <section id="main_screen">
+        <div class="main_screen_outer">
+            <div class="main_screen_inner_left">
+
+                <a href="https://cdiclinic.ru/" class="nav">Главная</a>
+                <span>&nbsp&nbsp>&nbsp&nbsp</span>
+                <a href="https://cdiclinic.ru/poleznye-sovety" class="nav">Статьи</a>
+                <span>&nbsp&nbsp>&nbsp&nbsp</span>
+                <a href="#" class="nav">Памятка после удаления зуба в клинике</a>
+
+                <h1>Памятка после удаления зуба в клинике</h1>
+
+                <div class="share">
+                    <img src="vector.png" alt="Поделиться">
+                    <a href="#">Поделиться статьей</a>
+                </div>
+
+                <p class="main_screen_p">
+                    <b>
+                    Памятка после удаления зуба от ЦДИ: что делать для быстрого заживления и как избежать осложнений? Подробные рекомендации, клиника ЦДИ в Балашихе.
+                    </b>
+                </p>
+
+                <h4 class="main_screen_h4">Содержание</h4>
+                <ol>
+                    <li><a>Нормальные реакции после удаления зуба</a></li>
+                    <li><a>Первая помощь сразу после операции</a></li>
+                    <li><a>Что нельзя делать</a></li>
+                    <li><a>Как соблюдать режим</a></li>
+                    <li><a>Регулярные осмотры</a></li>
+                    <li><a>Симптомы, которые должны насторожить</a></li>
+                </ol>
+
+            </div>
+            <div class="main_screen_inner_right">
+                <div class="doctor">
+                    <img src="doctor.png" class="doctor">
+                    <div class="doctor_info">
+                        <h3 class="doctor_info">Максимова-Кизля Мария</h2>
+                        <span class="doctor_info">Врач-стоматолог стоматолог ортопед</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/main_screen-->
+
+    <!--main_info-->
+    <section id="main_info">
+        <div class="main_info_outer">
+            <div class="main_info_inner_top">
+                <h2 class="main_info_inner_top_h2">Что делать для быстрого заживления?</h2>
+                <p class="main_info_inner_top_p">Зачастую, после удаления зуба вы можете отмечать у себя:</p>
+                    <ul>
+                        <li>
+                            Легкую боль в области удаленного зуба в течение 7 дней
+                            – это нормальное явление, с которым можно справиться обезболивающими.</li>
+                        <li>
+                            Отек на лице или десне, а также небольшой синяк. 
+                            Могут появиться на 2-3 день, но пройдут в течение первой недели.
+                        </li>
+                        <li> 
+                            Возможное кратковременное онемение лица 
+                             или области удаленного зуба. Обычно проходит в течение 1-2 дней.</li>
+                        <li>
+                            Легкое повышение температуры до 38°C в первые 24-48 часов после операции
+                            – естественная реакция организма.
+                        </li>
+                    </ul>
+                    <p class="main_info_inner_top_p">
+                        Удаление зуба – это серьезное вмешательство, требующее внимательного ухода и соблюдения рекомендаций
+                        для быстрого и безопасного восстановления.
+                    </p>
+                    <p class="main_info_inner_top_p">
+                        Чтобы избежать осложнений и ускорить процесс заживления,
+                        следуйте нашей памятке:
+                </p>
+                
+            </div>
+            <div class="main_info_inner_down">
+                <div class="main_info_inner_left">
+                    <div class="main_info_inner_left_dark">
+                        <span class="info_number one">1</span>
+                        <span class="info_text">
+                            После удаления зуба держите марлевый тампон в области лунки примерно 20-40 минут, чтобы остановить кровотечение.
+                            </span>
+                    </div>
+                    <div class="main_info_inner_left_white">
+                        <span class="info_number">2</span>
+                        <span class="info_text">
+                            Не стоит активно сплевывать или полоскать рот первые несколько дней после удаления,
+                            так как это может привести к выпадению кровяного сгустка и возобновить кровотечение.
+                        </span>
+                    </div>
+                    <div class="main_info_inner_left_dark">
+                        <span class="info_number">3</span>
+                        <span class="info_text">
+                            Прикладывайте холод к области операции в первые 3-4 часа на 10-15 минут с перерывами.
+                            Это уменьшит отек и уменьшит болевые ощущения.
+                        </span>
+                    </div>
+                </div>
+                <div class="main_info_inner_right">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/main_info-->
+
+    <!--important_info-->
+    <section id="important_info">
+        <div class="important_info">
+            <img src="tooth.png" class="important_img">
+            <div class="important_info_right">
+                <h4 class="important_info_h4">Важно знать!</h4>
+                <p class="important_info_p">
+                    Избегайте горячих ванн, саун и компрессов в первые 5-7 дней после удаления зуба.
+                    Алкоголь и курение могут замедлить процесс заживления и повысить риск осложнений.
+                    В первые 5 дней избегайте интенсивных физических нагрузок, наклонов и поднятия тяжестей.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--/important_info-->
+
+    <!--choose_info-->
+    <section id="choose_info">
+        <div class="choose_info_outer">
+            <div class="choose_info_inner_top">
+                <h3 class="choose_info_h3">Как соблюдать режим</h3>
+                <p class="choose_info_p"><b>Рассмотрим подробные рекомендации, которые помогут ускорить процесс заживления</b></p>
+                <div class="choose_navbar">
+                    <div class="choose_button active" id="choose_button1">
+                        <span class="choose_button_span">Питание и питье</span>
+                    </div>
+                    <div class="choose_button" id="choose_button2">
+                        <span class="choose_button_span">Уход за полостью рта</span>
+                    </div>
+                    <div class="choose_button" id="choose_button3">
+                        <span class="choose_button_span">Медикаменты и контроль</span>
+                    </div>
+                </div>
+            </div>
+            <div class="choose_info_inner_down">
+                <div class="choose_info_inner_left">
+                    <h2 id="text_container_h2">Питание и питье</h2>
+                    <p id="text_container_p">
+                        <b>Послеоперационное голодание:</b> не ешьте и не пейте в течение 2 часов после операции. 
+                        В следующие сутки избегайте горячей пищи и напитков. Пейте только теплую или прохладную жидкость.
+                        <br></br>
+                        <b>Грубая и острая пища:</b> в первые 3-4 дня избегайте жесткой, острой и горячей пищи.
+                        Не употребляйте продукты, которые могут застрять в лунке или повредить её (орехи, сухари, твердые продукты).
+                        <br></br>
+                        <b>Жевание:</b> не жуйте на стороне удаленного зуба в первые дни.
+                    </p>
+                </div>
+                <div class="choose_info_inner_right">
+                    <div class="choose_info_inner_right_image">
+                        <img src="girl-operation.png" alt="Операция на зуб">
+                    </div>
+                    <div class="choose_info_inner_right_button">
+                        Консультация
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/choose_info-->
+</body>
+</html>

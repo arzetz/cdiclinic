@@ -1,0 +1,334 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+body{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+/*Главная*/
+#main_screen{
+    display: flex;
+    justify-content: center;
+}
+.main_screen_outer{
+    /*Да или нет max-width: 1380px;*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.main_screen_inner_left{
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 680px;
+}
+.main_screen_inner_right{
+    margin-right: 100px;
+}
+a.nav{
+    color: #757575;
+    font-size: 15px;
+}
+h1{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+.share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 180px;
+    height: 25px;
+    gap: 5px;
+}
+.main_screen_p{
+    font-size: 15px;
+    margin-top: 15px;
+}
+.main_screen_h4{
+    margin-top: 15px;
+    font-size: 15px;
+}
+ol{
+    margin-top: 10px;
+    list-style-position: inside;
+    padding-left: 0px;
+  }
+ol li{
+    margin-bottom: 5px;
+}
+ol li a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+div.doctor{
+    text-align: center;
+    display: block;
+    background-color: #EEF2F9;
+    border-radius: 10px;
+    width: 220px;
+    height: 400px;
+}
+img.doctor{
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 160px;
+    height: 200px;
+}
+div.doctor_info{
+    margin-left: 30px;
+    text-align: left;
+    width: 160px;
+}
+h3.doctor_info{
+    margin-top: 15px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+span.doctor_info{
+    font-size: 13px;
+}
+@media(max-width: 1116px){
+    .main_screen_inner_left{
+        margin-left: 3%;
+    }
+    .main_screen_inner_right{
+        margin-right: 3%;
+    }
+}
+
+/*Инфо*/
+#main_info{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.main_info_outer{
+    /*Да или нет max-width: 1380px;*/
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main_info_inner_top{
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 15px;
+    width: 680px;
+}
+.main_info_inner_top_h2{
+    margin-top: 0px;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.main_info_inner_top_p{
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+ul{
+    margin-top: 15px;
+    list-style-type: none;
+    padding-left: 0px;
+  }
+ul li{
+    margin-bottom: 5px;
+    background: url(star.png) no-repeat;
+    background-size: 12px 12px;
+    background-position: left center;
+    padding-left: 25px;
+}
+
+.main_info_inner_down{
+    display: flex;
+   /*Да или нет*/ max-width: 1380px;
+   justify-content: space-between;
+}
+.main_info_inner_left{
+    width: 1200px;
+}
+/*Да или нет @media (min-width: 1380px) {
+    .main_info_inner_left{
+    margin-left: 100px;
+    }
+}*/
+.main_info_inner_right{
+    margin-right: 100px;
+    background-image: url(woman-cheek-stock.png);
+    width: 514px;
+    height: auto;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.main_info_inner_left_dark{
+    display: flex;
+    align-items: center;
+    height: auto;
+    background-color: #EEF2F9;
+}
+.main_info_inner_left_white{
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+.info_number{
+    margin-left: 100px;
+    font-size: 64px;
+
+}
+.info_text{
+    margin-top: 2%;
+    font-size: 15px;
+    margin-left: 60px;
+    width: 60%;
+    margin-bottom: 2%;
+}
+.info_number.one{
+    margin-left: 112px;
+}
+
+@media(max-width: 1380px){
+   
+}
+
+@media(max-width: 1116px){
+    .main_info_inner_top{
+        margin-left: 3%;
+    }
+    .main_info_inner_right{
+        margin-right: 3%;
+    }
+    .info_number{
+        margin-left: 6%;
+        font-size: 64px;
+    }    
+    .info_number.one{
+        margin-left: 8%;
+    }
+}
+
+/*Важное*/
+#important_info{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.important_info{
+    background-color: #EEF2F9;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 790px;
+    width: 100%;
+    height: auto;
+}
+.important_img{
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 77px;
+    height: 77px;
+}
+.important_info_right{
+    margin-right: 3%;
+}
+.important_info_h4{
+    margin-top: 25px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.important_info_p{
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+@media(max-width: 768px){
+    .important_info{
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+}
+
+/*Секция с выбором*/
+#choose_info{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.choose_info_outer{
+    width: 100%;
+}
+.choose_info_inner_top{
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 15px;
+    width: 680px;
+}
+.choose_info_h3{
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.choose_info_p{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.choose_button{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
+    border: 1px solid #54BAF3;
+    background-color: #ffffff;
+    border-radius: 27px;
+    height: 36px;
+    transition: background-color 0.3s ease;
+    margin-right: 13px;
+}
+.choose_button.active{
+    background-color: #EEF2F9;
+    border: 0px solid;
+    height: 38px;
+}
+.choose_button_span{
+    margin: 15px 9px 15px 9px;
+}
+.choose_navbar{
+    display: flex;
+}
+.choose_info_inner_down{
+    display: flex;
+
+    margin-left: 100px;
+}
+.choose_info_inner_left{
+    width: 680px;
+}
+.choose_info_inner_right{
+    display: block;
+    margin-top: 35px;
+    margin-left: 60px;
+}
+.choose_info_inner_right_image{
+    border-radius: 10px;
+}
+.choose_info_inner_right_button{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #54BAF3;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 44px;
+}
