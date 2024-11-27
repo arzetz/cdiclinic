@@ -10,6 +10,12 @@ a{
     text-decoration: none;
     color: black;
 }
+h1, h2, h3, h4 {
+  margin: 0;padding: 0;text-align: initial;
+}
+ol li a{
+	text-decoration: initial;
+}
 
 /*Главная*/
 #main_screen{
@@ -31,7 +37,7 @@ a{
 .main_screen_inner_right{
     margin-right: 100px;
 }
-a.nav{
+a.navi{
     color: #757575;
     font-size: 15px;
 }
@@ -97,6 +103,26 @@ h3.doctor_info{
 span.doctor_info{
     font-size: 13px;
 }
+.doctor_info_date{
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 6px;
+}
+img.doctor_info{
+    width: 18px;
+    height: 18px;
+    
+}
+.doctor_info_time{
+    display: flex;
+    align-items: center;
+}
+.doctor_info_extra{
+    font-size: 13px;
+    color: #757575;
+    margin-left: 6px;
+}
 @media(max-width: 1116px){
     .main_screen_inner_left{
         margin-left: 3%;
@@ -134,14 +160,14 @@ max-width: 1380px;
     margin-bottom: 0px;
 }
 
-ul{
+.star_ul_list{
     margin-top: 15px;
     list-style-type: none;
     padding-left: 0px;
   }
-ul li{
+.star_li_list{
     margin-bottom: 5px;
-    background: url(star.png) no-repeat;
+    background: url(upload/media/gallegy/star.png) no-repeat;
     background-size: 12px 12px;
     background-position: left center;
     padding-left: 25px;
@@ -157,7 +183,7 @@ ul li{
 }
 .main_info_inner_right{
     margin-right: 100px;
-    background-image: url(woman-cheek-stock.png);
+    background-image: url(upload/media/gallegy/woman-cheek-stock.png);
     width: 514px;
     height: auto;
     background-position: center center;
@@ -289,6 +315,11 @@ ul li{
     margin-top: 0px;
     margin-bottom: 15px;
 }
+#text_container_h2{
+	font-size: 22px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 .choose_info_p{
     margin-top: 0px;
     margin-bottom: 30px;
@@ -370,6 +401,7 @@ img.choose_info_inner_right_image{
     margin: 30px 0px 0px 30px;
 }
 .expert_info_h2{
+	font-size: 22px;
     margin: 0px 0px 0px 0px;
 }
 .expert_name{
@@ -388,15 +420,15 @@ img.choose_info_inner_right_image{
     margin-top: 24px;
     margin-bottom: 24px;
     margin-left: 60px;
-    margin-right: 60px; /* Оставляем только это */
+    margin-right: 60px;
     align-self: center;
     display: flex;
-    justify-content: flex-end; /* Правильное выравнивание */
-    align-items: flex-end; /* Выравнивание по нижнему краю */
+    justify-content: flex-end;
+    align-items: flex-end; 
     
     height: 220px;
     background-size: cover;
-    background-image: url('doctor_expert.png');
+    background-image: url('upload/media/gallegy/doctor_expert.png');
 }
 .expert_button{
     height: 36px;
@@ -410,3 +442,123 @@ img.choose_info_inner_right_image{
     color: #ffffff;
     border-radius: 10px;
 }
+
+/*Доп. текст*/
+#extra_info{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.extra_info_h2{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.extra_info_p{
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.extra_info_outer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4%;
+    max-width: 1180px;
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.extra_info_inner{
+  flex: 1 1 calc(46% - 10px);
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+/*Лучшие статьи*/
+#best_articles{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.best_articles_outer{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1180px;
+    width: 100%;
+    height: 460px;
+    margin: 110px 100px 110px 100px;
+    background-color: #EEF2F9;
+}
+.best_articles_inner{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+div.best_articles_h2{
+width: 100%;
+}
+h2.best_articles_h2{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.best_articles_inner_left{
+    align-self: center;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 40px;
+    position: relative;
+    width: 50%;
+}
+.best_articles_inner_right{
+    flex-direction: column;
+    width: 50%;
+}
+.best_articles_inner_right_article{
+    display: flex;
+    margin-bottom: 30px;
+}
+.best_articles_right_extra_info{
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    gap: 10px;
+}
+.best_articles_inner_right_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 161px;
+    height: 44px;
+    background-color: #54BAF3;
+    border-radius: 5px;
+    margin-top: 12.5px;
+    color: #ffffff;
+}
+.best_articles_inner_right_right{
+    margin-left: 30px;
+    margin-right: 25%;
+}
+.best_articles_p{
+    margin: 0px 0px 10px 0px;
+    font-size: 12px;
+}
+.extra_info_date{
+    display: flex;
+    align-self: center;
+}
+.extra_info_time{
+    display: flex;
+    align-self: center;
+}
+._service-page-header{
+		display:none;
+	}
+.our-promo{
+		display:none;
+		}
