@@ -123,12 +123,26 @@ img.doctor_info{
     color: #757575;
     margin-left: 6px;
 }
-@media(max-width: 1116px){
+@media(max-width: 1380px){
     .main_screen_inner_left{
-        margin-left: 3%;
+        margin-left: 45px;
+        margin-right: 40px;
     }
     .main_screen_inner_right{
-        margin-right: 3%;
+        margin-right: 45px;
+    }
+    div.doctor_info{
+        margin-left: 0px;
+        text-align: left;
+        width: 160px;
+    }
+    div.doctor{
+        text-align: center;
+        display: block;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 160px;
+        height: 400px;
     }
 }
 
@@ -224,31 +238,30 @@ max-width: 1380px;
 
 
 @media(max-width: 1380px){
-   
-}
-
-@media(max-width: 1116px){
     .main_info_inner_top{
-        margin-left: 3%;
+        margin-left: 45px;
     }
     .main_info_inner_right{
-        margin-right: 3%;
+        margin-right: 45px;
     }
     .main_info_inner_left_dark{
-        margin-left: 3%;
+        margin-left: 0%;
     }
     .main_info_inner_left_white{
-        margin-left: 3%;
+        margin-left: 0%;
     }
     .info_number{
-        margin-left: 6%;
+        margin-left: 5%;
         font-size: 64px;
     }    
     .info_number.one{
-        margin-left: 7%;
+        margin-left: 6%;
     }
     .info_text.one{
         margin-left: 65px;
+    }
+    #main_info{
+        margin-top: 60px;
     }
 }
 
@@ -288,10 +301,13 @@ max-width: 1380px;
     margin-top: 0px;
     margin-bottom: 25px;
 }
-@media(max-width: 768px){
+@media(max-width: 1380px){
     .important_info{
         margin-left: 45px;
         margin-right: 45px;
+    }
+    #important_info{
+        margin-top: 60px;
     }
 }
 
@@ -375,6 +391,21 @@ img.choose_info_inner_right_image{
     height: 44px;
     width: 100%;
 }
+@media(max-width: 1380px){
+    #choose_info{
+        margin-top: 60px;
+    }
+    .choose_info_inner_top{
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+    .choose_info_inner_down{
+        margin-left: 45px;
+    }
+    .choose_info_inner_right {
+        margin-right: 45px;
+      }
+}
 
 /*Мнение специалиста*/
 #expert_info{
@@ -442,6 +473,25 @@ img.choose_info_inner_right_image{
     color: #ffffff;
     border-radius: 10px;
 }
+@media(max-width: 1380px){
+    #expert_info{
+        margin-top: 60px;
+    }
+    .expert_info_outer {
+        margin-left: 0px;
+        margin-right: 0px;
+        max-width: 1380px;
+    }
+    .expert_info_inner_left{
+        margin-left: 45px;
+    }
+    .expert_info_inner_right{
+        margin-right: 45px;
+    }
+    .expert_info_p {
+        margin-top: 23px;
+      }
+}
 
 /*Доп. текст*/
 #extra_info{
@@ -475,12 +525,28 @@ img.choose_info_inner_right_image{
   box-sizing: border-box;
   margin-bottom: 15px;
 }
+@media(max-width: 1380px){
+    #extra_info{
+        margin-top: 60px;
+    }
+    .extra_info_outer{
+        flex-wrap:nowrap;
+        flex-direction: column;
+        gap: 0%;
+        max-width: 1380px;
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+    .extra_info_h2{
+        margin-bottom: 25px;
+    }
+}
 
 /*Лучшие статьи*/
 #best_articles{
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 110px;
 }
 .best_articles_outer{
     border-radius: 10px;
@@ -490,7 +556,7 @@ img.choose_info_inner_right_image{
     max-width: 1180px;
     width: 100%;
     height: 460px;
-    margin: 110px 100px 110px 100px;
+    margin: 0px 100px 110px 100px;
     background-color: #EEF2F9;
 }
 .best_articles_inner{
@@ -556,6 +622,35 @@ h2.best_articles_h2{
     display: flex;
     align-self: center;
 }
+@media(max-width: 1380px){
+    #best_articles{
+        margin-top: 60px;
+    }
+    .best_articles_outer{
+        border-radius: 0px;
+        max-width: 1380px;
+        margin: 0px 0px 110px 0px;
+        background-color: #EEF2F9;
+    }
+    h2.best_articles_h2 {
+        margin-top: 30px;
+    }
+    .best_articles_inner_right_right{
+        margin-left: 15px;
+        margin-right: 0px;
+    }
+    
+    img.best_articles_inner_right_left{
+        border-radius: 10px;
+        width: 100%;
+        height: 102px;
+        object-fit: cover;
+    }
+    .best_articles_inner_right_article{
+        max-width: 500px;
+    }
+}
+
 ._service-page-header{
 		display:none;
 	}
