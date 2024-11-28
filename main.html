@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const buttons = document.querySelectorAll('.choose_button');
             const textContainer_h2 = document.getElementById('text_container_h2');
             const textContainer_p = document.getElementById('text_container_p');
-    
+
             const texts_h2 = {
                 choose_button1: "Питание и питье",
                 choose_button2: "Уход за полостью рта",
                 choose_button3: "Медикаменты и контроль"
             };
-    
+
             const texts_p = {
                 choose_button1: `<b>Послеоперационное голодание:</b> не ешьте и не пейте в течение 2 часов после операции. 
                 В следующие сутки избегайте горячей пищи и напитков. Пейте только теплую или прохладную жидкость.
@@ -35,7 +36,7 @@
                 <br></br>
                 <b>Не трогайте лунку:</b> не касайтесь места удаления зуба языком,
                 руками или другими предметами, чтобы избежать инфекции и повреждения лунки.`,
-                
+
                 choose_button3: `<b>Противовоспалительные и обезболивающие средства:</b> при боли и отеке принимайте препараты,
                 назначенные врачом, чтобы уменьшить воспаление и ускорить заживление.
                 <br></br>
@@ -44,9 +45,9 @@
                 <b>Температура:</b> легкое повышение температуры в первые сутки после операции является нормой.
                 Если температура держится выше 38°C или продолжается более 2 дней, обратитесь к врачу.`
             };
-    
+
             buttons.forEach(choose_button => {
-                choose_button.addEventListener('click', function() {
+                choose_button.addEventListener('click', function () {
                     buttons.forEach(d => d.classList.remove('active'));
                     this.classList.add('active');
                     const buttonId = this.id;
@@ -56,20 +57,31 @@
             });
         });
     </script>
-    
+
 </head>
+
 <body>
+
+    <!--Navigation-->
+    <section id="navigation">
+        <div class="navi_outer">
+            <div class="navi_inner">
+                <a href="https://cdiclinic.ru/" class="navi">Главная</a>
+                <span>  >  </span>
+                <a href="https://cdiclinic.ru/poleznye-sovety" class="navi">Статьи</a>
+                <span>  >  </span>
+                <a href="#" class="navi">Памятка после удаления зуба в клинике</a>
+            </div>
+        </div>
+    </section>
+    <!--/Navigation-->
 
     <!--main_screen-->
     <section id="main_screen">
         <div class="main_screen_outer">
             <div class="main_screen_inner_left">
 
-                <a href="https://cdiclinic.ru/" class="navi">Главная</a>
-                <span>  >  </span>
-                <a href="https://cdiclinic.ru/poleznye-sovety" class="navi">Статьи</a>
-                <span>  >  </span>
-                <a href="#" class="navi">Памятка после удаления зуба в клинике</a>
+
 
                 <h1>Памятка после удаления зуба в клинике</h1>
 
@@ -80,18 +92,20 @@
 
                 <p class="main_screen_p">
                     <b>
-                    Памятка после удаления зуба от ЦДИ: что делать для быстрого заживления и как избежать осложнений? Подробные рекомендации, клиника ЦДИ в Балашихе.
+                        Памятка после удаления зуба от ЦДИ: что делать для быстрого заживления и как избежать
+                        осложнений? Подробные рекомендации, клиника ЦДИ в Балашихе.
                     </b>
                 </p>
 
                 <h4 class="main_screen_h4">Содержание</h4>
                 <ol>
-                    <li><a>Нормальные реакции после удаления зуба</a></li>
-                    <li><a>Первая помощь сразу после операции</a></li>
-                    <li><a>Что нельзя делать</a></li>
-                    <li><a>Как соблюдать режим</a></li>
-                    <li><a>Регулярные осмотры</a></li>
-                    <li><a>Симптомы, которые должны насторожить</a></li>
+                    <li><a href="#main_info_anchor">Нормальные реакции после удаления зуба</a></li>
+                    <li><a href="#first_help_anchor">Первая помощь сразу после операции</a></li>
+                    <li><a href="#important_info_anchor">Что нельзя делать</a></li>
+                    <li><a href="#choose_info_anchor">Как соблюдать режим</a></li>
+                    <li><a href="#expert_info_anchor">Регулярные осмотры</a></li>
+                    <li id="main_info_anchor"><a href="#best_articles_anchor">Симптомы, которые должны насторожить</a>
+                    </li>
                 </ol>
 
             </div>
@@ -100,15 +114,15 @@
                     <img src="upload/media/gallegy/doctor.png" class="doctor">
                     <div class="doctor_info">
                         <h3 class="doctor_info">Максимова-Кизля Мария</h2>
-                        <span class="doctor_info">Врач-стоматолог стоматолог ортопед</span>
-                        <div class="doctor_info_date">
-                            <img src="upload/media/gallegy/date.png" class="doctor_info">
-                            <span class="doctor_info_extra">10.12.2024</span>
-                        </div>
-                        <div class="doctor_info_time">
-                            <img src="upload/media/gallegy/time.png" class="doctor_info">
-                            <span class="doctor_info_extra">~15 мин.</span>
-                        </div>
+                            <span class="doctor_info">Врач-стоматолог стоматолог ортопед</span>
+                            <div class="doctor_info_date">
+                                <img src="upload/media/gallegy/date.png" class="doctor_info">
+                                <span class="doctor_info_extra">10.12.2024</span>
+                            </div>
+                            <div class="doctor_info_time">
+                                <img src="upload/media/gallegy/time.png" class="doctor_info">
+                                <span class="doctor_info_extra">~15 мин.</span>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -122,39 +136,40 @@
             <div class="main_info_inner_top">
                 <h2 class="main_info_inner_top_h2">Что делать для быстрого заживления?</h2>
                 <p class="main_info_inner_top_p">Зачастую, после удаления зуба вы можете отмечать у себя:</p>
-                    <ul class="star_ul_list">
-                        <li class="star_li_list">
-                            Легкую боль в области удаленного зуба в течение 7 дней
-                            – это нормальное явление, с которым можно справиться обезболивающими.</li>
-                        <li class="star_li_list">
-                            Отек на лице или десне, а также небольшой синяк. 
-                            Могут появиться на 2-3 день, но пройдут в течение первой недели.
-                        </li>
-                        <li class="star_li_list"> 
-                            Возможное кратковременное онемение лица 
-                             или области удаленного зуба. Обычно проходит в течение 1-2 дней.</li>
-                        <li class="star_li_list">
-                            Легкое повышение температуры до 38°C в первые 24-48 часов после операции
-                            – естественная реакция организма.
-                        </li>
-                    </ul>
-                    <p class="main_info_inner_top_p">
-                        Удаление зуба – это серьезное вмешательство, требующее внимательного ухода и соблюдения рекомендаций
-                        для быстрого и безопасного восстановления.
-                    </p>
-                    <p class="main_info_inner_top_p">
-                        Чтобы избежать осложнений и ускорить процесс заживления,
-                        следуйте нашей памятке:
+                <ul class="star_ul_list" id="first_help_anchor">
+                    <li class="star_li_list">
+                        Легкую боль в области удаленного зуба в течение 7 дней
+                        – это нормальное явление, с которым можно справиться обезболивающими.</li>
+                    <li class="star_li_list">
+                        Отек на лице или десне, а также небольшой синяк.
+                        Могут появиться на 2-3 день, но пройдут в течение первой недели.
+                    </li>
+                    <li class="star_li_list">
+                        Возможное кратковременное онемение лица
+                        или области удаленного зуба. Обычно проходит в течение 1-2 дней.</li>
+                    <li class="star_li_list">
+                        Легкое повышение температуры до 38°C в первые 24-48 часов после операции
+                        – естественная реакция организма.
+                    </li>
+                </ul>
+                <p class="main_info_inner_top_p">
+                    Удаление зуба – это серьезное вмешательство, требующее внимательного ухода и соблюдения рекомендаций
+                    для быстрого и безопасного восстановления.
                 </p>
-                
+                <p class="main_info_inner_top_p">
+                    Чтобы избежать осложнений и ускорить процесс заживления,
+                    следуйте нашей памятке:
+                </p>
+
             </div>
-            <div class="main_info_inner_down">
+            <div class="main_info_inner_down" id="important_info_anchor">
                 <div class="main_info_inner_left">
                     <div class="main_info_inner_left_dark">
                         <span class="info_number one">1</span>
                         <span class="info_text one">
-                            После удаления зуба держите марлевый тампон в области лунки примерно 20-40 минут, чтобы остановить кровотечение.
-                            </span>
+                            После удаления зуба держите марлевый тампон в области лунки примерно 20-40 минут, чтобы
+                            остановить кровотечение.
+                        </span>
                     </div>
                     <div class="main_info_inner_left_white">
                         <span class="info_number">2</span>
@@ -163,7 +178,7 @@
                             так как это может привести к выпадению кровяного сгустка и возобновить кровотечение.
                         </span>
                     </div>
-                    <div class="main_info_inner_left_dark">
+                    <div class="main_info_inner_left_dark" id="choose_info_anchor">
                         <span class="info_number">3</span>
                         <span class="info_text">
                             Прикладывайте холод к области операции в первые 3-4 часа на 10-15 минут с перерывами.
@@ -199,8 +214,9 @@
         <div class="choose_info_outer">
             <div class="choose_info_inner_top">
                 <h3 class="choose_info_h3">Как соблюдать режим?</h3>
-                <p class="choose_info_p"><b>Рассмотрим подробные рекомендации, которые помогут ускорить процесс заживления:</b></p>
-                <div class="choose_navbar">
+                <p class="choose_info_p"><b>Рассмотрим подробные рекомендации, которые помогут ускорить процесс
+                        заживления:</b></p>
+                <div class="choose_navbar" id="expert_info_anchor">
                     <div class="choose_button active" id="choose_button1">
                         <span class="choose_button_span">Питание и питье</span>
                     </div>
@@ -216,21 +232,25 @@
                 <div class="choose_info_inner_left">
                     <h2 id="text_container_h2">Питание и питье</h2>
                     <p id="text_container_p">
-                        <b>Послеоперационное голодание:</b> не ешьте и не пейте в течение 2 часов после операции. 
-                        В следующие сутки избегайте горячей пищи и напитков. Пейте только теплую или прохладную жидкость.
+                        <b>Послеоперационное голодание:</b> не ешьте и не пейте в течение 2 часов после операции.
+                        В следующие сутки избегайте горячей пищи и напитков. Пейте только теплую или прохладную
+                        жидкость.
                         <br></br>
                         <b>Грубая и острая пища:</b> в первые 3-4 дня избегайте жесткой, острой и горячей пищи.
-                        Не употребляйте продукты, которые могут застрять в лунке или повредить её (орехи, сухари, твердые продукты).
+                        Не употребляйте продукты, которые могут застрять в лунке или повредить её (орехи, сухари,
+                        твердые продукты).
                         <br></br>
                         <b>Жевание:</b> не жуйте на стороне удаленного зуба в первые дни.
                     </p>
                 </div>
                 <div class="choose_info_inner_right">
                     <div class="choose_info_inner_right_image">
-                        <img src="upload/media/gallegy/girl-operation.png" alt="Операция на зуб" class="choose_info_inner_right_image">
+                        <img src="upload/media/gallegy/girl-operation.png" alt="Операция на зуб"
+                            class="choose_info_inner_right_image">
                     </div>
                     <div class="choose_info_inner_right_button">
-                        Консультация
+                        <a href="javascript:" class="sendrequest white_a"
+                            data-name="Не откладывайте посещение стоматолога.">Консультация</a>
                     </div>
                 </div>
             </div>
@@ -240,7 +260,7 @@
 
     <!--expert_info-->
     <section id="expert_info">
-        <div class="expert_info_outer">
+        <div class="expert_info_outer" id="best_articles_anchor">
             <div class="expert_info_inner_left">
                 <h2 class="expert_info_h2">Мнение эксперта</h2>
                 <span class="expert_name"><b>Максимова-Кизля Мария</b></span>
@@ -248,11 +268,17 @@
                 <p class="expert_info_p">
                     После удаления зуба обязательно приходите на повторные осмотры, если врач их назначил.
                     Если у вас возникли вопросы или беспокойства, обратитесь в клинику ЦДИ.
-                    Соблюдение нашей памятки поможет вам ускорить процесс заживления и снизить риск осложнений. 
-                    </p>
+                    Соблюдение нашей памятки поможет вам ускорить процесс заживления и снизить риск осложнений.
+                </p>
             </div>
-            <div class="expert_info_inner_right">
-                <div class="expert_button">
+            <div class="expert_info_outer_right">
+                <div class="expert_info_inner_right">
+                    <div class="expert_button_big">
+                        <a href="javascript:" class="sendrequest white_a"
+                            data-name="Не откладывайте посещение стоматолога.">Записаться</a>
+                    </div>
+                </div>
+                <div class="expert_button_small">
                     Записаться
                 </div>
             </div>
@@ -267,29 +293,39 @@
             <div class="extra_info_inner">
                 <p class="extra_info_p">
                     <b>Продолжительное кровотечение и усиливающаяся боль.</b>
-                    Если кровотечение не останавливается более 12 часов, это может свидетельствовать о нарушении сворачиваемости крови или осложнениях после процедуры.
-                    Обращение к врачу требуется для устранения причины кровотечения. Также, если боль не уменьшается или усиливается через 2-3 дня, это может быть признаком инфекции или воспаления, что требует немедленного вмешательства.
+                    Если кровотечение не останавливается более 12 часов, это может свидетельствовать о нарушении
+                    сворачиваемости крови или осложнениях после процедуры.
+                    Обращение к врачу требуется для устранения причины кровотечения. Также, если боль не уменьшается или
+                    усиливается через 2-3 дня, это может быть признаком инфекции или воспаления, что требует
+                    немедленного вмешательства.
                 </p>
             </div>
             <div class="extra_info_inner">
                 <p class="extra_info_p">
                     <b>Отек, гематома и высокая температура.</b>
-                    Сильный отек или гематома, которые не уменьшаются через 3 дня, могут указывать на воспаление или инфекцию в области повреждения. В таких случаях важно обратиться к специалисту для диагностики и лечения.
-                    Также, если температура тела превышает 38°C или держится долгое время, это сигнализирует о возможной инфекции, требующей медицинской помощи.
+                    Сильный отек или гематома, которые не уменьшаются через 3 дня, могут указывать на воспаление или
+                    инфекцию в области повреждения. В таких случаях важно обратиться к специалисту для диагностики и
+                    лечения.
+                    Также, если температура тела превышает 38°C или держится долгое время, это сигнализирует о возможной
+                    инфекции, требующей медицинской помощи.
                 </p>
             </div>
             <div class="extra_info_inner">
                 <p class="extra_info_p">
                     <b>Трудности с открытием рта и неприятный запах.</b>
-                    Если возникают трудности с открытием рта, особенно при болезненных ощущениях, это может быть связано с воспалением или инфекцией в области челюсти. Не стоит откладывать визит к врачу.
-                    Также гнилостный запах изо рта — это тревожный симптом, указывающий на наличие инфекции или осложнений, которые требуют немедленного вмешательства.
+                    Если возникают трудности с открытием рта, особенно при болезненных ощущениях, это может быть связано
+                    с воспалением или инфекцией в области челюсти. Не стоит откладывать визит к врачу.
+                    Также гнилостный запах изо рта — это тревожный симптом, указывающий на наличие инфекции или
+                    осложнений, которые требуют немедленного вмешательства.
                 </p>
             </div>
             <div class="extra_info_inner">
                 <p class="extra_info_p">
                     <b>Проблемы с швами и подвижность зубов или имплантатов.</b>
-                    Потеря швов или подвижность соседних зубов и имплантатов — это признаки того, что процесс заживления нарушен.
-                    Если имплантаты или зубы начинают двигаться, существует риск их отторжения или повреждения, что требует срочной консультации врача для корректировки лечения.
+                    Потеря швов или подвижность соседних зубов и имплантатов — это признаки того, что процесс заживления
+                    нарушен.
+                    Если имплантаты или зубы начинают двигаться, существует риск их отторжения или повреждения, что
+                    требует срочной консультации врача для корректировки лечения.
                 </p>
             </div>
         </div>
@@ -301,25 +337,43 @@
         <div class="best_articles_outer">
             <div class="best_articles_h2">
                 <h2 class="best_articles_h2">Лучшие статьи</h2>
-             </div>
-             <div class="best_articles_inner">
+            </div>
+            <div class="best_articles_inner">
                 <div class="best_articles_inner_left">
                     <div class="best_articles_inner_left_article">
                         <img src="upload/media/gallegy/big_article.png" alt="Big article image">
                     </div>
+                    <div class="best_articles_inner_left_article_text">
+                        <div class="article_text">
+                            <p class="article_text" style="font-size: 10px;">Протезирование</p>
+                            <p class="article_text"><b>Онемение после имплантации, почему не проходит?</b></p>
+                            <p class="article_text"><b>Максимова-Кизля Мария</b></p>
+                            <div class="articles_extra_text">
+                                <div class="articles_extra_text">
+                                    <img src="upload/media/gallegy/date_white.png" class="doctor_info">
+                                    <span class="article_info_extra"><b>10.12.2024</b></span>
+                                </div>
+                                <div class="articles_extra_time">
+                                    <img src="upload/media/gallegy/time_white.png" class="doctor_info">
+                                    <span class="article_info_extra"><b>~15 мин.</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="best_articles_inner_right">
                     <div class="best_articles_inner_right_article">
-                        <div class="best_articles_inner_right_left"><img src="upload/media/gallegy/small_article.png" alt="Статья_1" class="best_articles_inner_right_left"></div>
+                        <div class="best_articles_inner_right_left"><img src="upload/media/gallegy/small_article.png"
+                                alt="Статья_1" class="best_articles_inner_right_left"></div>
                         <div class="best_articles_inner_right_right">
                             <p class="best_articles_p"><b>Онемение после имплантации, почему не проходит?</b></p>
                             <p class="best_articles_p"><b>Максимова-Кизля Мария?</b></p>
                             <div class="best_articles_right_extra_info">
-                                <div class="extra_info_date">
+                                <div class="extra_article_info_date">
                                     <img src="upload/media/gallegy/date.png" class="doctor_info">
                                     <span class="doctor_info_extra"><b>10.12.2024</b></span>
                                 </div>
-                                <div class="extra_info_time">
+                                <div class="extra_article_info_time">
                                     <img src="upload/media/gallegy/time.png" class="doctor_info">
                                     <span class="doctor_info_extra"><b>~15 мин.</span>
                                 </div>
@@ -328,7 +382,8 @@
                     </div>
                     <div class="best_articles_inner_right_article">
                         <div class="best_articles_inner_right_left">
-                            <img src="upload/media/gallegy/small_article.png" alt="Статья_2" class="best_articles_inner_right_left">
+                            <img src="upload/media/gallegy/small_article.png" alt="Статья_2"
+                                class="best_articles_inner_right_left">
                         </div>
                         <div class="best_articles_inner_right_right">
                             <p class="best_articles_p"><b>Онемение после имплантации, почему не проходит?</b></p>
@@ -346,12 +401,35 @@
                         </div>
                     </div>
                     <div class="best_articles_inner_right_button">
-                        Больше статей
+                        <a class="white_a" href="https://cdiclinic.ru/poleznye-sovety">Больше статей</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!--/best_articles-->
+
+    <!--form_section-->
+    <section id="form_section">
+        <div class="form_section_outer">
+            <div class="form_section_inner">
+                <div class="form_section_inner_left">
+                    <h1 class="form_h1">Запишитесь на прием прямо сейчас!</h1>
+                    <p class="form_p">Оставьте заявку и с Вами свяжется наш администратор, ответит на все вопросы или запишет на прием</p>
+                    <div class="form_button">
+                        <a href="javascript:" class="sendrequest white_a"
+                            data-name="Не откладывайте посещение стоматолога.">Записаться на прием</a>
+                    </div>
+                    <span>Или позвоните нам сами  
+                        </span><span>+7 (495) 487-53-51</span>
+                </div>
+                <div class="form_section_inner_right">
+                    <img src="upload/media/gallegy/girl-operation-2.png" alt="" class="form_image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/form_section-->
 </body>
+
 </html>
